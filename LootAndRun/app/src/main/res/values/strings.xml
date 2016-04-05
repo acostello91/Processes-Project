@@ -71,4 +71,6 @@
     <string name="title_activity_combat">FIGHT!</string>
     <string name="dummy_button">Run Away!!</string>
     <string name="dummy_content">Fight!</string>
+    <string name="title_activity_victory_screen">VictoryScreen</string>
+    <string name="title_activity_defeat_screen">DefeatScreen</string>
 </resources>

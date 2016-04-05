@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -26,6 +27,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
 
 public class MainMap extends FragmentActivity
         implements
@@ -43,6 +45,8 @@ public class MainMap extends FragmentActivity
     private Marker mCurrentLocation;
     public static final String TAG = MainMap.class.getSimpleName();
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +121,15 @@ public class MainMap extends FragmentActivity
         startActivity(intent);
     }
 
+    public void fightMonster(View view)
+    {
+        Intent intent = new Intent(this, Combat.class);
+
+        startActivity(intent);
+
+
+
+    }
     //--------------Location Stuff------------
     @Override
     public void onConnected(Bundle bundle) {

@@ -60,16 +60,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="processes_project.lootandrun.MainMap" />
         </activity>
+        <activity android:name=".Combat" />
         <activity
-            android:name=".Combat"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_combat"
-            android:parentActivityName=".MainMap"
-            android:theme="@style/FullscreenTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="processes_project.lootandrun.MainMap" />
-        </activity>
+            android:name=".VictoryScreen"
+            android:label="@string/title_activity_victory_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DefeatScreen"
+            android:label="@string/title_activity_defeat_screen"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

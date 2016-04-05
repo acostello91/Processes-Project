@@ -2,16 +2,18 @@ package processes_project.lootandrun;
 
 import android.location.Location;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Danny on 3/30/2016.
  */
-public class Character {
+public class Character{
     private int health;
     private String charName;
     private int attackDamage;
     private ArrayList<Item> Inventory;
+    private Boolean isDead;
 
     public int getHealth() {
         return health;
@@ -55,11 +57,22 @@ public class Character {
 
     private Location charLocation;
 
+    public void setDead (Boolean isdead)
+    {
+        this.isDead = isdead;
+    }
+
+    public Boolean isDead()
+    {
+        return isDead;
+    }
+
     public Character(int health, String charName, Location charLocation, int attackDamage, ArrayList<Item> inventory) {
         this.health = health;
         this.charName = charName;
         this.charLocation = charLocation;
         this.attackDamage = attackDamage;
         Inventory = new ArrayList<Item>();
+        this.setDead(false);
     }
 }
